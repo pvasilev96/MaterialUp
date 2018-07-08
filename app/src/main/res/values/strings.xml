@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Uplabs</string>
+    <string name="label_join"><b>Join</b> Uplabs community</string>
 </resources>
