@@ -1,10 +1,13 @@
 package com.pvasilev.uplabs.data.models
 
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 import com.squareup.moshi.Json
 import java.util.*
 
+@Entity(tableName = "posts")
 data class Post(
-        val id: Int,
+        @PrimaryKey val id: Int,
         @Json(name = "name") val title: String,
         @Json(name = "description_without_html") val description: String,
         @Json(name = "animated_teaser_url") val teaser: String,
