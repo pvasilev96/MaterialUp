@@ -1,4 +1,4 @@
-package com.pvasilev.uplabs.models
+package com.pvasilev.uplabs.data.models
 
 data class Config(val authenticityToken: String, val search: Search)
 

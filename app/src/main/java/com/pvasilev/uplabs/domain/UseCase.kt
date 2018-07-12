@@ -7,7 +7,7 @@ import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.Executor
 import javax.inject.Inject
 
-abstract class UserCase<T, in Params> @Inject constructor(
+abstract class UseCase<T, in Params> @Inject constructor(
         private val computationExecutor: Executor,
         private val postComputationExecutor: Executor
 ) {
