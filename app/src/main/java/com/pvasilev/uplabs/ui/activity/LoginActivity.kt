@@ -1,17 +1,19 @@
-package com.pvasilev.uplabs
+package com.pvasilev.uplabs.ui.activity
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.webkit.*
-import kotlinx.android.synthetic.main.activity_main.*
+import com.pvasilev.uplabs.BuildConfig
+import com.pvasilev.uplabs.R
+import kotlinx.android.synthetic.main.activity_login.*
 
-class MainActivity : AppCompatActivity(), ValueCallback<String> {
+class LoginActivity : AppCompatActivity(), ValueCallback<String> {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
         btn_google.setOnClickListener { webview.loadUrl("${BuildConfig.BASE_URL}auth/google") }
         btn_twitter.setOnClickListener { webview.loadUrl("${BuildConfig.BASE_URL}auth/twitter") }
         btn_facebook.setOnClickListener { webview.loadUrl("${BuildConfig.BASE_URL}auth/facebook") }
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity(), ValueCallback<String> {
                 override fun onPageFinished(view: WebView, url: String) {
                     super.onPageFinished(view, url)
                     if (url == BuildConfig.BASE_URL) {
-                        view.evaluateJavascript(LOGIN_SCRIPT, this@MainActivity)
+                        view.evaluateJavascript(LOGIN_SCRIPT, this@LoginActivity)
                     }
                 }
 
