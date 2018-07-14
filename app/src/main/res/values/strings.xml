@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Uplabs</string>
     <string name="label_join"><b>Join</b> Uplabs community</string>
+    <string name="menu_item_feed">Feed</string>
+    <string name="menu_item_search">Search</string>
+    <string name="menu_item_notifications">Notifications</string>
+    <string name="menu_item_profile">Profile</string>
 </resources>
